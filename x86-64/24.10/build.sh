@@ -26,7 +26,7 @@ PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 # zrenx
 PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-samba4-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-transmission-zh-cn transmission-web"
+PACKAGES="$PACKAGES luci-i18n-transmission-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-nlbwmon-zh-cn"
 PACKAGES="$PACKAGES luci-app-wrtbwmon"
