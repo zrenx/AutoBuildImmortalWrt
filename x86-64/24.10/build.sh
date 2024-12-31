@@ -5,7 +5,9 @@ echo "编译固件大小为: $PROFILE MB"
 # 输出调试信息
 echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始编译..."
 
-sed -i '$a src-git kiddin9 https://github.com/kiddin9/kwrt-packages.git;main' /home/build/immortalwrt/feeds.conf.default
+#sed -i '$a src-git kiddin9 https://github.com/kiddin9/kwrt-packages.git;main' /home/build/immortalwrt/feeds.conf.default
+#https://dl.openwrt.ai/packages-24.10/x86_64/kiddin9/
+src/gz kiddin9_packages https://dl.openwrt.ai/packages-24.10/x86_64/kiddin9/
 
 # 定义所需安装的包列表
 PACKAGES=""
