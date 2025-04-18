@@ -5,9 +5,9 @@ echo "Starting 99-custom.sh at $(date)" >> $LOGFILE
 echo "编译固件大小为: $PROFILE MB"
 echo "Include Docker: $INCLUDE_DOCKER"
 
-echo "添加kiddin9源"
-sed -i '$a src/gz kiddin9_packages https://dl.openwrt.ai/packages-24.10/x86_64/kiddin9' repositories.conf
-sed -i '/^option check_signature/s/^\(.*\)$/#\1/' repositories.conf
+#echo "添加kiddin9源"
+#sed -i '$a src/gz kiddin9_packages https://dl.openwrt.ai/packages-24.10/x86_64/kiddin9' repositories.conf
+#sed -i '/^option check_signature/s/^\(.*\)$/#\1/' repositories.conf
 
 echo "Create pppoe-settings"
 mkdir -p  /home/build/immortalwrt/files/etc/config
@@ -56,11 +56,11 @@ fi
 PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-transmission-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"
-PACKAGES="$PACKAGES luci-app-wrtbwmon"
-PACKAGES="$PACKAGES luci-app-cpulimit"
-PACKAGES="$PACKAGES luci-app-nikki"
-PACKAGES="$PACKAGES luci-app-wechatpush"
-PACKAGES="$PACKAGES luci-app-eqosplus"
+#PACKAGES="$PACKAGES luci-app-wrtbwmon"
+#PACKAGES="$PACKAGES luci-app-cpulimit"
+#PACKAGES="$PACKAGES luci-app-nikki"
+#PACKAGES="$PACKAGES luci-app-wechatpush"
+#PACKAGES="$PACKAGES luci-app-eqosplus"
 
 # 构建镜像
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Building image with the following packages:"
