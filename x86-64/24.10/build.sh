@@ -53,11 +53,13 @@ if [ "$INCLUDE_DOCKER" = "yes" ]; then
 fi
 
 # 增加几个自用组件
+PACKAGES="$PACKAGES yq bc vim"
 PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn"
+PACKAGES="$PACKAGES ddns-scripts-cloudflare"
 PACKAGES="$PACKAGES luci-i18n-transmission-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"
+PACKAGES="$PACKAGES luci-app-cpulimit"
 #PACKAGES="$PACKAGES luci-app-wrtbwmon"
-#PACKAGES="$PACKAGES luci-app-cpulimit"
 #PACKAGES="$PACKAGES luci-app-nikki"
 #PACKAGES="$PACKAGES luci-app-wechatpush"
 #PACKAGES="$PACKAGES luci-app-eqosplus"
