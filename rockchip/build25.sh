@@ -55,9 +55,6 @@ PACKAGES="$PACKAGES luci-theme-argon"
 PACKAGES="$PACKAGES luci-app-argon-config"
 PACKAGES="$PACKAGES luci-i18n-argon-config-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
-PACKAGES="$PACKAGES xray-core hysteria luci-i18n-passwall-zh-cn"
-PACKAGES="$PACKAGES luci-app-openclash"
-PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
     PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
@@ -93,6 +90,20 @@ if echo "$PACKAGES" | grep -q "luci-app-openclash"; then
     wget "$URL" -P /home/build/immortalwrt/packages/
 else
     echo "⚪️ 未选择 luci-app-openclash"
+fi
+
+if echo "$PACKAGES" | grep -q "luci-app-ssr-plus"; then
+    echo "✅ 已选择 luci-app-ssr-plus，添加 mihomo core"
+    mkdir -p files/usr/bin
+    # Download mihomo
+    MIHOMO_URL="https://github.com/MetaCubeX/mihomo/releases/download/v1.19.24/mihomo-linux-arm64-v1.19.24.gz"
+    mkdir -p files/usr/bin
+    wget -qO- "$MIHOMO_URL" | gzip -dc > files/usr/bin/mihomo
+    chmod +x files/usr/bin/mihomo
+    echo "✅ 已下载 mihomo core"
+    ls -lah files/usr/bin
+else
+    echo "⚪️ 未选择 luci-app-ssr-plus"
 fi
 
 
