@@ -65,12 +65,7 @@ PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
 
 # 增加几个zrenx自用组件
 PACKAGES="$PACKAGES yq bc vim"
-PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn"
 PACKAGES="$PACKAGES ddns-scripts-cloudflare"
-PACKAGES="$PACKAGES luci-i18n-transmission-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-cpulimit-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-appfilter-zh-cn"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
