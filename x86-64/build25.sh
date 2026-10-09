@@ -63,6 +63,9 @@ PACKAGES="$PACKAGES luci-i18n-filemanager-zh-cn"
 # 合并imm仓库以外的第三方插件 暂时注释
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
 
+# 增加几个zrenx自用组件
+PACKAGES="$PACKAGES yq bc vim"
+PACKAGES="$PACKAGES ddns-scripts-cloudflare"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
